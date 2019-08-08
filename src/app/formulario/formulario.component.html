@@ -1,0 +1,15 @@
+<form [formGroup]="formulario" (ngSubmit)="enviar(formulario)">
+    <p>
+        <label for="Nombre">Nombre: </label>
+        <input id="Nombre" formControlName="nombre" type="text">
+    </p>
+    <p>
+        <label for="Email">Email: </label>
+        <input id="Email" formControlName="email" type="email">
+    </p>
+    <p>
+        <label for="Password">Password: </label>
+        <input id="Password" formControlName="pwd" type="password">
+    </p>
+    <button type="submit" [disabled]="formulario.invalid">Enviar</button>
+</form>
